@@ -33,10 +33,10 @@ def build_frontend():
     frontend_dir = os.path.join(os.path.dirname(__file__), '..', 'src', 'frontend')
     
     if not os.path.exists(frontend_dir):
-        print(f"❌ Frontend directory not found: {frontend_dir}")
+        print(f"ERROR: Frontend directory not found: {frontend_dir}")
         return False
     
-    print("🔨 Building React frontend...")
+    print("Building React frontend...")
     try:
         # Install dependencies
         if sys.platform == "win32":
@@ -46,20 +46,20 @@ def build_frontend():
             install_cmd = ["npm", "install"]
             build_cmd = ["npm", "run", "build"]
         
-        print("📦 Installing npm dependencies...")
+        print("Installing npm dependencies...")
         subprocess.run(install_cmd, cwd=frontend_dir, shell=(sys.platform == "win32"), check=True)
         
-        print("🏗️ Building React app...")
+        print("Building React app...")
         subprocess.run(build_cmd, cwd=frontend_dir, shell=(sys.platform == "win32"), check=True)
         
-        print("✅ Frontend built successfully")
+        print("Frontend built successfully")
         return True
         
     except subprocess.CalledProcessError as e:
-        print(f"❌ Error building frontend: {e}")
+        print(f"ERROR: Error building frontend: {e}")
         return False
     except FileNotFoundError:
-        print("❌ npm not found. Please install Node.js and npm.")
+        print("ERROR: npm not found. Please install Node.js and npm.")
         return False
 
 def create_launcher_script():
@@ -136,14 +136,14 @@ if __name__ == '__main__':
     with open(launcher_path, 'w', encoding='utf-8') as f:
         f.write(launcher_content)
     
-    print(f"✅ Created launcher script: {launcher_path}")
+    print(f"Created launcher script: {launcher_path}")
     return launcher_path
 
 def build_executable():
     """Build executable using PyInstaller"""
     platform_name, arch = get_platform_info()
     
-    print(f"🔨 Building executable for {platform_name} ({arch})...")
+    print(f"Building executable for {platform_name} ({arch})...")
     
     # Create launcher script
     launcher_path = create_launcher_script()
@@ -173,7 +173,7 @@ def build_executable():
         cmd.extend(['--hidden-import', 'webview.platforms.gtk'])
     
     try:
-        print("🏗️ Running PyInstaller...")
+        print("Running PyInstaller...")
         subprocess.run(cmd, check=True)
         
         # Move executable to dist folder
@@ -188,9 +188,9 @@ def build_executable():
             if os.path.exists(target_exe):
                 os.remove(target_exe)
             shutil.move(source_exe, target_exe)
-            print(f"✅ Executable created: {target_exe}")
+            print(f"Executable created: {target_exe}")
         else:
-            print(f"❌ Executable not found: {source_exe}")
+            print(f"ERROR: Executable not found: {source_exe}")
             return False
         
         # Clean up launcher script
@@ -199,29 +199,29 @@ def build_executable():
         return True
         
     except subprocess.CalledProcessError as e:
-        print(f"❌ Error building executable: {e}")
+        print(f"ERROR: Error building executable: {e}")
         return False
 
 def main():
     """Main build function"""
-    print("🎲 AGE Toolbox - Universal Build Script")
+    print("AGE Toolbox - Universal Build Script")
     print("=" * 50)
     
     platform_name, arch = get_platform_info()
-    print(f"🖥️ Platform: {platform_name} ({arch})")
+    print(f"Platform: {platform_name} ({arch})")
     
     # Build frontend
     if not build_frontend():
-        print("❌ Frontend build failed")
+        print("ERROR: Frontend build failed")
         sys.exit(1)
     
     # Build executable
     if not build_executable():
-        print("❌ Executable build failed")
+        print("ERROR: Executable build failed")
         sys.exit(1)
     
-    print("🎉 Build completed successfully!")
-    print(f"📦 Executable location: dist/AGE_Toolbox{'exe' if platform_name == 'windows' else ''}")
+    print("Build completed successfully!")
+    print(f"Executable location: dist/AGE_Toolbox{'exe' if platform_name == 'windows' else ''}")
 
 if __name__ == '__main__':
     main()

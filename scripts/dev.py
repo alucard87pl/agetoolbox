@@ -17,9 +17,9 @@ sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..', 'src'))
 
 try:
     from app import app
-    print("✅ Flask app imported successfully")
+    print("Flask app imported successfully")
 except ImportError as e:
-    print(f"❌ Failed to import Flask app: {e}")
+    print(f"ERROR: Failed to import Flask app: {e}")
     sys.exit(1)
 
 # Global variable to track processes
@@ -27,7 +27,7 @@ react_process = None
 
 def start_flask_api():
     """Start Flask API server"""
-    print("🚀 Starting Flask API server on port 5000...")
+    print("Starting Flask API server on port 5000...")
     app.run(host='127.0.0.1', port=5000, debug=False, use_reloader=False)
 
 def start_react_dev():
@@ -36,10 +36,10 @@ def start_react_dev():
     frontend_dir = os.path.join(os.path.dirname(__file__), '..', 'src', 'frontend')
     
     if not os.path.exists(frontend_dir):
-        print(f"❌ Frontend directory not found: {frontend_dir}")
+        print(f"ERROR: Frontend directory not found: {frontend_dir}")
         return
     
-    print("⚛️ Starting React development server on port 3000...")
+    print("Starting React development server on port 3000...")
     try:
         if sys.platform == "win32":
             cmd = f'cd "{frontend_dir}" && npm run dev'
@@ -50,23 +50,23 @@ def start_react_dev():
         # Wait for the process
         react_process.wait()
     except Exception as e:
-        print(f"❌ Error starting React dev server: {e}")
-        print("💡 Make sure npm dependencies are installed: cd src/frontend && npm install")
+        print(f"ERROR: Error starting React dev server: {e}")
+        print("Make sure npm dependencies are installed: cd src/frontend && npm install")
 
 def open_browser():
     """Open browser to React dev server"""
     time.sleep(6)  # Give servers time to start
-    print("🌐 Opening browser to React development server...")
+    print("Opening browser to React development server...")
     webbrowser.open('http://localhost:3000')
 
 def signal_handler(sig, frame):
     """Handle Ctrl+C gracefully"""
     global react_process
-    print("\n🛑 Shutting down development servers...")
+    print("\nShutting down development servers...")
     if react_process:
-        print("⚛️ Terminating React dev server...")
+        print("Terminating React dev server...")
         react_process.terminate()
-    print("👋 Thanks for using AGE Toolbox!")
+    print("Thanks for using AGE Toolbox!")
     sys.exit(0)
 
 def main():
@@ -76,11 +76,11 @@ def main():
     # Set up signal handler for graceful shutdown
     signal.signal(signal.SIGINT, signal_handler)
     
-    print("🎲 AGE Toolbox - Development Mode")
+    print("AGE Toolbox - Development Mode")
     print("=" * 40)
-    print("⚛️ React Dev Server: http://localhost:3000")
-    print("🐍 Flask API: http://127.0.0.1:5000")
-    print("💡 Press Ctrl+C to stop")
+    print("React Dev Server: http://localhost:3000")
+    print("Flask API: http://127.0.0.1:5000")
+    print("Press Ctrl+C to stop")
     print("-" * 40)
     
     # Start Flask API in background thread
@@ -102,7 +102,7 @@ def main():
     except KeyboardInterrupt:
         signal_handler(None, None)
     except Exception as e:
-        print(f"❌ Error: {e}")
+        print(f"ERROR: {e}")
         sys.exit(1)
 
 if __name__ == '__main__':
