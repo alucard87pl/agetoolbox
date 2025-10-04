@@ -1,0 +1,30 @@
+{
+  "name": "age-toolbox",
+  "version": "1.0.0",
+  "description": "Modern AGE RPG System Support Tool",
+  "main": "index.js",
+  "scripts": {
+    "dev": "python scripts/dev.py",
+    "build": "python scripts/build.py",
+    "install-frontend": "cd src/frontend && npm install",
+    "build-frontend": "cd src/frontend && npm run build"
+  },
+  "keywords": [
+    "rpg",
+    "modern-age",
+    "dice-roller",
+    "stunts",
+    "desktop-app"
+  ],
+  "author": "AGE Toolbox",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/age-toolbox.git"
+  },
+  "engines": {
+    "node": ">=16.0.0",
+    "python": ">=3.8.0"
+  }
+}
+

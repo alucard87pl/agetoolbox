@@ -1,0 +1,8 @@
+# Flask + React + Webview Setup
+flask>=2.3.0
+flask-cors>=4.0.0
+pywebview>=4.0.0
+openpyxl>=3.1.0
+
+# Build tools
+pyinstaller>=5.0.0

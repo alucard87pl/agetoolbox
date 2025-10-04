@@ -1,0 +1,322 @@
+[
+  {
+    "id": 1,
+    "name": "Mighty Blow",
+    "cost": 2,
+    "category": "Combat",
+    "setting": null,
+    "description": "Add +2 to damage with a melee attack."
+  },
+  {
+    "id": 2,
+    "name": "Precise Attack",
+    "cost": 1,
+    "category": "Combat",
+    "setting": null,
+    "description": "Ignore 2 points of armor with your next attack."
+  },
+  {
+    "id": 3,
+    "name": "Thunderous Blow",
+    "cost": 3,
+    "category": "Combat",
+    "setting": "Cinematic",
+    "description": "Knock your target prone with a successful attack."
+  },
+  {
+    "id": 4,
+    "name": "Lethal Blow",
+    "cost": 4,
+    "category": "Combat",
+    "setting": "Gritty",
+    "description": "Double your damage dice on a successful attack."
+  },
+  {
+    "id": 5,
+    "name": "Defensive Stance",
+    "cost": 1,
+    "category": "Combat",
+    "setting": null,
+    "description": "Gain +2 Defense until your next turn."
+  },
+  {
+    "id": 6,
+    "name": "Riposte",
+    "cost": 2,
+    "category": "Combat",
+    "setting": null,
+    "description": "Make an immediate counterattack when successfully parrying."
+  },
+  {
+    "id": 7,
+    "name": "Sneak Attack",
+    "cost": 2,
+    "category": "Combat",
+    "setting": null,
+    "description": "Add your Dexterity to damage when attacking from surprise."
+  },
+  {
+    "id": 8,
+    "name": "Power Attack",
+    "cost": 1,
+    "category": "Combat",
+    "setting": null,
+    "description": "Take -2 to attack for +4 damage."
+  },
+  {
+    "id": 9,
+    "name": "Quick Shot",
+    "cost": 1,
+    "category": "Combat",
+    "setting": null,
+    "description": "Make an additional ranged attack at -2."
+  },
+  {
+    "id": 10,
+    "name": "Called Shot",
+    "cost": 2,
+    "category": "Combat",
+    "setting": null,
+    "description": "Target a specific body part for special effects."
+  },
+  {
+    "id": 11,
+    "name": "Second Wind",
+    "cost": 3,
+    "category": "Combat",
+    "setting": null,
+    "description": "Recover 1d6+Constitution Health."
+  },
+  {
+    "id": 12,
+    "name": "Battle Fury",
+    "cost": 4,
+    "category": "Combat",
+    "setting": "Pulpy",
+    "description": "Gain +1 to all attacks and damage until combat ends."
+  },
+  {
+    "id": 13,
+    "name": "Trick Shot",
+    "cost": 2,
+    "category": "Combat",
+    "setting": "Cinematic",
+    "description": "Bounce your shot off a surface to hit a target behind cover."
+  },
+  {
+    "id": 14,
+    "name": "Dirty Fighting",
+    "cost": 1,
+    "category": "Combat",
+    "setting": "Gritty",
+    "description": "Use sand, pocket dirt, or similar to blind your opponent."
+  },
+  {
+    "id": 15,
+    "name": "Whirlwind Attack",
+    "cost": 3,
+    "category": "Combat",
+    "setting": "Cinematic",
+    "description": "Attack all adjacent enemies with a single action."
+  },
+  {
+    "id": 16,
+    "name": "Acrobatic Dodge",
+    "cost": 2,
+    "category": "Movement",
+    "setting": "Cinematic",
+    "description": "Move up to your Speed without provoking opportunity attacks."
+  },
+  {
+    "id": 17,
+    "name": "Leap",
+    "cost": 1,
+    "category": "Movement",
+    "setting": null,
+    "description": "Jump up to twice your normal distance."
+  },
+  {
+    "id": 18,
+    "name": "Sprint",
+    "cost": 2,
+    "category": "Movement",
+    "setting": null,
+    "description": "Double your movement speed for one round."
+  },
+  {
+    "id": 19,
+    "name": "Wall Run",
+    "cost": 3,
+    "category": "Movement",
+    "setting": "Cinematic",
+    "description": "Run along a wall for your movement."
+  },
+  {
+    "id": 20,
+    "name": "Quick Draw",
+    "cost": 1,
+    "category": "Movement",
+    "setting": null,
+    "description": "Draw and ready a weapon as a free action."
+  },
+  {
+    "id": 21,
+    "name": "Inspire",
+    "cost": 2,
+    "category": "Social",
+    "setting": null,
+    "description": "Give an ally +1 to their next action."
+  },
+  {
+    "id": 22,
+    "name": "Intimidate",
+    "cost": 1,
+    "category": "Social",
+    "setting": null,
+    "description": "Force an enemy to make a Willpower test or be shaken."
+  },
+  {
+    "id": 23,
+    "name": "Fast Talk",
+    "cost": 2,
+    "category": "Social",
+    "setting": "Pulpy",
+    "description": "Convince someone of something unlikely but not impossible."
+  },
+  {
+    "id": 24,
+    "name": "Leadership",
+    "cost": 3,
+    "category": "Social",
+    "setting": null,
+    "description": "Coordinate multiple allies for a group action."
+  },
+  {
+    "id": 25,
+    "name": "Charm",
+    "cost": 2,
+    "category": "Social",
+    "setting": null,
+    "description": "Make a target temporarily friendly toward you."
+  },
+  {
+    "id": 26,
+    "name": "Deduction",
+    "cost": 1,
+    "category": "Mental",
+    "setting": null,
+    "description": "Gain insight into a situation or person."
+  },
+  {
+    "id": 27,
+    "name": "Eureka Moment",
+    "cost": 2,
+    "category": "Mental",
+    "setting": null,
+    "description": "Instantly solve a problem or remember crucial information."
+  },
+  {
+    "id": 28,
+    "name": "Concentration",
+    "cost": 1,
+    "category": "Mental",
+    "setting": null,
+    "description": "Ignore penalties from distractions for one action."
+  },
+  {
+    "id": 29,
+    "name": "Quick Study",
+    "cost": 2,
+    "category": "Mental",
+    "setting": null,
+    "description": "Temporarily gain a focus or specialization."
+  },
+  {
+    "id": 30,
+    "name": "Perfect Recall",
+    "cost": 1,
+    "category": "Mental",
+    "setting": null,
+    "description": "Remember any detail you've previously observed."
+  },
+  {
+    "id": 31,
+    "name": "Variable Strike",
+    "cost": "1-3",
+    "category": "Combat",
+    "setting": null,
+    "description": "Deal additional damage equal to SP spent (1-3 extra damage)."
+  },
+  {
+    "id": 32,
+    "name": "Adaptive Defense",
+    "cost": "2+",
+    "category": "Combat",
+    "setting": null,
+    "description": "Gain +1 Defense per SP spent, minimum 2 SP."
+  },
+  {
+    "id": 33,
+    "name": "Flexible Movement",
+    "cost": "1-4",
+    "category": "Movement",
+    "setting": "Cinematic",
+    "description": "Move additional squares equal to SP spent (1-4 extra movement)."
+  },
+  {
+    "id": 34,
+    "name": "Masterful Persuasion",
+    "cost": "3+",
+    "category": "Social",
+    "setting": null,
+    "description": "Convince someone of something increasingly unlikely. Minimum 3 SP."
+  },
+  {
+    "id": 35,
+    "name": "Enhanced Senses",
+    "cost": "1-2",
+    "category": "Mental",
+    "setting": null,
+    "description": "Gain enhanced perception for 1-2 rounds based on SP spent."
+  },
+  {
+    "id": 36,
+    "name": "Devastating Blow",
+    "cost": "4+",
+    "category": "Combat",
+    "setting": "Gritty",
+    "description": "Deal massive damage. Spend 4+ SP for increasingly lethal effects."
+  },
+  {
+    "id": 37,
+    "name": "Acrobatic Flourish",
+    "cost": "2-5",
+    "category": "Movement",
+    "setting": "Cinematic",
+    "description": "Perform spectacular acrobatic moves. Complexity scales with SP (2-5)."
+  },
+  {
+    "id": 38,
+    "name": "Tactical Insight",
+    "cost": "2+",
+    "category": "Mental",
+    "setting": null,
+    "description": "Gain tactical advantages. More SP = better positioning and bonuses."
+  },
+  {
+    "id": 39,
+    "name": "Social Mastery",
+    "cost": "1-6",
+    "category": "Social",
+    "setting": "Pulpy",
+    "description": "Achieve any social goal. Difficulty determines SP cost (1-6 range)."
+  },
+  {
+    "id": 40,
+    "name": "Overwhelming Force",
+    "cost": "5+",
+    "category": "Combat",
+    "setting": "Cinematic",
+    "description": "Unleash devastating power. Minimum 5 SP, effects scale with investment."
+  }
+]
