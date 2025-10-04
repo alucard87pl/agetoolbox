@@ -63,6 +63,9 @@ src/frontend/build/
 *.temp
 launcher.py
 
+# Distribution folder
+AGE_Toolbox_Distribution/
+
 # Logs
 *.log
 
